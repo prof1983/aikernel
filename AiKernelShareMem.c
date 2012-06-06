@@ -24,15 +24,46 @@ http://msdn.microsoft.com/en-us/library/windows/desktop/aa366551%28v=vs.85%29.as
 
 #include "ABase2.h"
 
-func ShareMem_At()
+// --- Defines ---
+
+#define BUF_SIZE 256
+TCHAR szName[] = TEXT("Global\\AiKernelFileMappingObject");
+TCHAR szMsg[] = TEXT("Message from first process.");
+
+// --- Var ---
+
+HANDLE hMapFile;
+LPCTSTR pBuf;
+
+// --- Functions ---
+
+PVOID ShareMem_At(AUInt BufSize)
 {
+	return (PVOID)MapViewOfFile(hMapFile,   // handle to map object
+						FILE_MAP_ALL_ACCESS, // read/write permission
+						0,
+						0,
+						BufSize);
+
 	// Unix: use shmat()
 }
 
-func ShareMem_Get()
+HANDLE ShareMem_Get(AUInt Size, LPCSTR Name)
 {
+	//DWORD BSize;
+	//LPCTSTR pBuf;
+
+	//BSize = BufSize;
+
+	return CreateFileMapping(
+				 INVALID_HANDLE_VALUE,    // use paging file
+				 NULL,                    // default security
+				 PAGE_READWRITE,          // read/write access
+				 0,                       // maximum object size (high-order DWORD)
+				 Size,                   // maximum object size (low-order DWORD)
+				 Name);                 // name of mapping object
+
 	// Unix: use shmget()
-	return 0;
 }
 
 func Semaphore_New()
@@ -40,5 +71,71 @@ func Semaphore_New()
 	//CreateFileMapping();
 
 	// Unix: use semget()
+	return 0;
+}
+
+int ShareMem()
+{
+	hMapFile = ShareMem_Get(BUF_SIZE, szName);
+
+	if (hMapFile == NULL)
+	{
+		return -2;
+	}
+
+	pBuf = ShareMem_At(BUF_SIZE);
+
+	if (pBuf == NULL)
+	{
+		CloseHandle(hMapFile);
+		return -3;
+	}
+
+	/*
+	pBuf = (LPTSTR)ShareMem_Get(BUF_SIZE);
+	if (pBuf == NULL)
+	{
+		return -3;
+	}
+	*/
+
+	/*
+	hMapFile = CreateFileMapping(
+				 INVALID_HANDLE_VALUE,    // use paging file
+				 NULL,                    // default security
+				 PAGE_READWRITE,          // read/write access
+				 0,                       // maximum object size (high-order DWORD)
+				 BUF_SIZE,                // maximum object size (low-order DWORD)
+				 szName);                 // name of mapping object
+
+	if (hMapFile == NULL)
+	{
+		return -2;
+	}
+	pBuf = (LPTSTR) MapViewOfFile(hMapFile,   // handle to map object
+						FILE_MAP_ALL_ACCESS, // read/write permission
+						0,
+						0,
+						BUF_SIZE);
+	if (pBuf == NULL)
+	{
+		CloseHandle(hMapFile);
+		return -3;
+	}
+	*/
+
+
+	CopyMemory((PVOID)pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
+
+	return 0;
+}
+
+func UnShareMem()
+{
+	UnmapViewOfFile(pBuf);
+	CloseHandle(hMapFile);
+
+	// Unix: use shmctl()
+
 	return 0;
 }
