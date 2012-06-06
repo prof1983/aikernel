@@ -86,6 +86,9 @@
 			<TASM_Debugging>None</TASM_Debugging>
 		</PropertyGroup>
 		<ItemGroup>
+			<None Include="..\AiKernel.h">
+				<BuildOrder>1</BuildOrder>
+			</None>
 			<CppCompile Include="..\AiKernelMain.c">
 				<BuildOrder>0</BuildOrder>
 			</CppCompile>
