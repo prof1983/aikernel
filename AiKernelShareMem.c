@@ -22,7 +22,7 @@ http://msdn.microsoft.com/en-us/library/windows/desktop/aa366551%28v=vs.85%29.as
 #include <conio.h>
 #include <tchar.h>
 
-#include "ABase2.h"
+#include "AiKernelShareMem.h"
 
 // --- Defines ---
 
@@ -33,11 +33,12 @@ TCHAR szMsg[] = TEXT("Message from first process.");
 // --- Var ---
 
 HANDLE hMapFile;
-LPCTSTR pBuf;
+PVOID/*LPCTSTR*/ pBuf;
 
 // --- Functions ---
 
-PVOID ShareMem_At(AUInt BufSize)
+PVOID
+func ShareMem_At(HANDLE hMapFile, AUInt BufSize)
 {
 	return (PVOID)MapViewOfFile(hMapFile,   // handle to map object
 						FILE_MAP_ALL_ACCESS, // read/write permission
@@ -48,13 +49,22 @@ PVOID ShareMem_At(AUInt BufSize)
 	// Unix: use shmat()
 }
 
-HANDLE ShareMem_Get(AUInt Size, LPCSTR Name)
+AError
+func ShareMem_Close(HANDLE hMapFile)
 {
-	//DWORD BSize;
-	//LPCTSTR pBuf;
+	CloseHandle(hMapFile);
+}
 
-	//BSize = BufSize;
+AError
+func ShareMem_Free(PVOID pBuf)
+{
+	UnmapViewOfFile(pBuf);
+	return 0;
+}
 
+HANDLE
+func ShareMem_Get(AUInt Size, LPCSTR Name)
+{
 	return CreateFileMapping(
 				 INVALID_HANDLE_VALUE,    // use paging file
 				 NULL,                    // default security
@@ -68,13 +78,12 @@ HANDLE ShareMem_Get(AUInt Size, LPCSTR Name)
 
 func Semaphore_New()
 {
-	//CreateFileMapping();
-
 	// Unix: use semget()
 	return 0;
 }
 
-int ShareMem()
+int
+func ShareMem()
 {
 	hMapFile = ShareMem_Get(BUF_SIZE, szName);
 
@@ -83,47 +92,13 @@ int ShareMem()
 		return -2;
 	}
 
-	pBuf = ShareMem_At(BUF_SIZE);
+	pBuf = ShareMem_At(hMapFile, BUF_SIZE);
 
 	if (pBuf == NULL)
 	{
 		CloseHandle(hMapFile);
 		return -3;
 	}
-
-	/*
-	pBuf = (LPTSTR)ShareMem_Get(BUF_SIZE);
-	if (pBuf == NULL)
-	{
-		return -3;
-	}
-	*/
-
-	/*
-	hMapFile = CreateFileMapping(
-				 INVALID_HANDLE_VALUE,    // use paging file
-				 NULL,                    // default security
-				 PAGE_READWRITE,          // read/write access
-				 0,                       // maximum object size (high-order DWORD)
-				 BUF_SIZE,                // maximum object size (low-order DWORD)
-				 szName);                 // name of mapping object
-
-	if (hMapFile == NULL)
-	{
-		return -2;
-	}
-	pBuf = (LPTSTR) MapViewOfFile(hMapFile,   // handle to map object
-						FILE_MAP_ALL_ACCESS, // read/write permission
-						0,
-						0,
-						BUF_SIZE);
-	if (pBuf == NULL)
-	{
-		CloseHandle(hMapFile);
-		return -3;
-	}
-	*/
-
 
 	CopyMemory((PVOID)pBuf, szMsg, (_tcslen(szMsg) * sizeof(TCHAR)));
 
@@ -132,8 +107,8 @@ int ShareMem()
 
 func UnShareMem()
 {
-	UnmapViewOfFile(pBuf);
-	CloseHandle(hMapFile);
+	ShareMem_Free(pBuf);
+	ShareMem_Close(hMapFile);
 
 	// Unix: use shmctl()
 
