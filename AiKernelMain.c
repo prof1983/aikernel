@@ -11,6 +11,8 @@ Version(0.0)
 
 #include "AiKernel.h"
 
+// ----
+
 func Agenda_Init()
 {
 	return 0;
