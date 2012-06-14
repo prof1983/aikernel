@@ -96,6 +96,21 @@
 			<CppCompile Include="..\AiKernelShareMem.c">
 				<BuildOrder>2</BuildOrder>
 			</CppCompile>
+			<CppCompile Include="..\AOwl.c">
+				<BuildOrder>3</BuildOrder>
+			</CppCompile>
+			<None Include="..\AOwl.h">
+				<BuildOrder>5</BuildOrder>
+			</None>
+			<CppCompile Include="..\AOwlNode.c">
+				<BuildOrder>4</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\AOwlNodeSet.c">
+				<BuildOrder>7</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\AOwlObject.c">
+				<BuildOrder>6</BuildOrder>
+			</CppCompile>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
