@@ -56,6 +56,9 @@ ATypeDef(AOwlObjectPropertyExpression, AOwlNode);
 ATypeDef(AOwlNamedIndividual, AOwlNode);
 ATypeDef(AOwlClassExpression, AOwlNode);
 ATypeDef(AOwlDataPropertyExpression, AOwlNode);
+ATypeDef(AOwlAxiom, AInt);
+ATypeDef(AOwlAxiomSet, AOwlEntitySet);
+ATypeDef(AOwlAxiomType, AInt);
 
 ATypeDef(AOwlOntology, AInt);
 
@@ -166,5 +169,9 @@ const AOwlInferenceType_ObjectPropertyHierarchy = 7;
 /** Denotes the computation of individuals that are interpreted as the same object for each
 	individual in the imports closure of the root ontology. */
 const AOwlInferenceType_SameIndividual = 8;
+
+// ---
+
+ATypeDef(AOwlInferenceTypeSet, AInt);
 
 #endif
