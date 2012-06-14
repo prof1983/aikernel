@@ -15,8 +15,6 @@ http://owlapi.sourceforge.net/
 
 // --- org.semanticweb.owlapi.reasoner ---
 
-typedef AInt AOwlReasoner;
-
 // --- AOwlReasonerConfiguration ---
 
 // --- AOwlReasonerFactory ---

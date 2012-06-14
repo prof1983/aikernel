@@ -18,7 +18,7 @@ http://owlapi.sourceforge.net/
 	Returns: true if this NodeSet contains a Node that contains the entity, and false if
 		this NodeSet does not contain a Node that contains the entity. */
 ABoolean
-func AOwlNodeSet_ContainsEntity(AOwlEntity Entity)
+func AOwlNodeSet_ContainsEntity(AOwlNodeSet NodeSet, AOwlEntity Entity)
 {
 	return AFalse;
 }
@@ -26,13 +26,13 @@ func AOwlNodeSet_ContainsEntity(AOwlEntity Entity)
 /** A convenience method that gets all of the entities contained in the Nodes in this NodeSet.
 	Returns: The union of the entities contained in the Nodes in this NodeSet. */
 AOwlEntitySet
-func AOwlNodeSet_GetFlattened()
+func AOwlNodeSet_GetFlattened(AOwlNodeSet NodeSet)
 {
 	return 0;
 }
 
 AOwlEntityIterator
-func AOwlNodeSet_GetIteartor()
+func AOwlNodeSet_GetIteartor(AOwlNodeSet NodeSet)
 {
 	return 0;
 }
@@ -41,7 +41,7 @@ func AOwlNodeSet_GetIteartor()
 	Returns: The set of Nodes contained in this NodeSet. Note that this set will be an
 		unmodifiable set. */
 AOwlEntitySet
-func AOwlNodeSet_GetNodes()
+func AOwlNodeSet_GetNodes(AOwlNodeSet NodeSet)
 {
 	return 0;
 }
@@ -51,13 +51,13 @@ func AOwlNodeSet_GetNodes()
 		otherwise false
 	See Also: AOwlNode_IsBottomNode() */
 ABoolean
-func AOwlNodeSet_IsBottomSingleton()
+func AOwlNodeSet_IsBottomSingleton(AOwlNodeSet NodeSet)
 {
 	return AFalse;
 }
 
 ABoolean
-func AOwlNodeSet_IsEmpty()
+func AOwlNodeSet_IsEmpty(AOwlNodeSet NodeSet)
 {
 	return AFalse;
 }
@@ -66,7 +66,7 @@ func AOwlNodeSet_IsEmpty()
 	A NodeSet is a singleton if it contains only one Node.
 	Returns: true if this NodeSet is a singleton, otherwise false. */
 ABoolean
-func AOwlNodeSet_IsSingleton()
+func AOwlNodeSet_IsSingleton(AOwlNodeSet NodeSet)
 {
 	return AFalse;
 }
@@ -75,7 +75,7 @@ func AOwlNodeSet_IsSingleton()
 	Returns: true if this NodeSet is a singleton that contains only the top node, and false otherwise.
 	See Also: AOwlNode_IsTopNode() */
 ABoolean
-func AOwlNodeSet_IsTopSingleton()
+func AOwlNodeSet_IsTopSingleton(AOwlNodeSet NodeSet)
 {
 	return AFalse;
 }

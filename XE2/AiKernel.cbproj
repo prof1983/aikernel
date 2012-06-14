@@ -111,6 +111,9 @@
 			<CppCompile Include="..\AOwlObject.c">
 				<BuildOrder>6</BuildOrder>
 			</CppCompile>
+			<CppCompile Include="..\AOwlReasoner.c">
+				<BuildOrder>8</BuildOrder>
+			</CppCompile>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>
