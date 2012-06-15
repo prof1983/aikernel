@@ -1,13 +1,13 @@
 /* AOwlObject functions
-Author(Prof1983 prof1983@ya.ru)
-Created(14.06.2012)
-LastMod(14.06.2012)
-Version(0.0)
-
-Prototype: OwlApi
-http://sourceforge.net/projects/owlapi/
-http://owlapi.sourceforge.net/
-*/
+ * Author(Prof1983 prof1983@ya.ru)
+ * Created(14.06.2012)
+ * LastMod(15.06.2012)
+ * Version(0.0)
+ *
+ * Prototype: OwlApi
+ * http://sourceforge.net/projects/owlapi/
+ * http://owlapi.sourceforge.net/
+ */
 
 #include "AOwl.h"
 
@@ -20,19 +20,23 @@ http://owlapi.sourceforge.net/
 //accept(OWLObjectVisitorEx<O> visitor)
 
 /** A convenience method that obtains the classes that are in the signature of this object.
-	Returns: A set containing the classes (OwlClass) that are in the signature of this object.
-		The set is a subset of the signature, and is not backed by the signature;
-		it is a modifiable collection and changes are not reflected by the signature. */
+ *  @return A set containing the classes (OwlClass) that are in the signature of this object.
+ *      The set is a subset of the signature, and is not backed by the signature;
+ *      it is a modifiable collection and changes are not reflected by the signature.
+ */
 AOwlEntitySet
 func AOwlObject_GetClassesInSignature()
 {
 	return 0;
 }
 
-/** A convenience method that obtains the data properties that are in the signature of this object.
-	Returns: A set containing the data properties (OwlDataProperty) that are in the signature of
-		this object. The set is a subset of the signature, and is not backed by the signature;
-		it is a modifiable collection and changes are not reflected by the signature. */
+/** A convenience method that obtains the data properties that are in the
+ *  signature of this object.
+ *
+ *  @return A set containing the data properties (OwlDataProperty) that are in the signature of
+ *      this object. The set is a subset of the signature, and is not backed by the signature;
+ *      it is a modifiable collection and changes are not reflected by the signature.
+ */
 AOwlEntitySet
 func AOwlObject_GetDataPropertiesInSignature()
 {
@@ -40,9 +44,11 @@ func AOwlObject_GetDataPropertiesInSignature()
 }
 
 /** A convenience method that obtains the datatypes that are in the signature of this object.
-	Returns: A set containing the datatypes (OwlDatatype) that are in the signature of this object.
-		The set is a subset of the signature, and is not backed by the signature;
-		it is a modifiable collection and changes are not reflected by the signature. */
+ *
+ *  @return A set containing the datatypes (OwlDatatype) that are in the signature of this object.
+ *      The set is a subset of the signature, and is not backed by the signature;
+ *      it is a modifiable collection and changes are not reflected by the signature.
+ */
 AOwlEntitySet
 func AOwlObject_GetDatatypesInSignature()
 {
@@ -50,9 +56,11 @@ func AOwlObject_GetDatatypesInSignature()
 }
 
 /** A convenience method that obtains the individuals that are in the signature of this object.
-	Returns: A set containing the individuals (OwlNamedIndividual) that are in the signature of
-		this object. The set is a subset of the signature, and is not backed by the signature;
-		it is a modifiable collection and changes are not reflected by the signature. */
+ *
+ *  @return A set containing the individuals (OwlNamedIndividual) that are in the signature of
+ *      this object. The set is a subset of the signature, and is not backed by the signature;
+ *      it is a modifiable collection and changes are not reflected by the signature.
+ */
 AOwlEntitySet
 func AOwlObject_GetIndividualsInSignature()
 {
@@ -60,8 +68,10 @@ func AOwlObject_GetIndividualsInSignature()
 }
 
 /** Gets all of the nested (includes top level) class expressions that are used in this object.
-	Returns: A set of OWLClassExpressions that represent the nested class expressions used in
-		this object. */
+ *
+ *  @return A set of OWLClassExpressions that represent the nested class expressions used in
+ *      this object.
+ */
 AOwlEntitySet
 func AOwlObject_GetNestedClassExpressions()
 {
@@ -69,9 +79,10 @@ func AOwlObject_GetNestedClassExpressions()
 }
 
 /** A convenience method that obtains the object properties that are in the signature of this object.
-	Returns: A set containing the object properties (OwlObjectProperty) that are in the signature
-		of this object.	The set is a subset of the signature, and is not backed by the signature;
-		it is a modifiable collection and changes are not reflected by the signature. */
+ *  @return A set containing the object properties (OwlObjectProperty) that are in the signature
+ *      of this object. The set is a subset of the signature, and is not backed by the signature;
+ *      it is a modifiable collection and changes are not reflected by the signature.
+ */
 AOwlEntitySet
 func AOwlObject_GetObjectPropertiesInSignature()
 {
@@ -79,8 +90,10 @@ func AOwlObject_GetObjectPropertiesInSignature()
 }
 
 /** Gets the signature of this object.
-	Returns: A set of entities (OwlEntity) that correspond to the signature of this object.
-		The set is an unmodifiable collection. */
+ *
+ *  @return A set of entities (OwlEntity) that correspond to the signature of this object.
+ *      The set is an unmodifiable collection.
+ */
 AOwlEntitySet
 func AOwlObject_GetSignature()
 {
@@ -88,8 +101,10 @@ func AOwlObject_GetSignature()
 }
 
 /** Determines if this object is either, owl:Nothing (the bottom class), owl:bottomObjectProperty
-	(the bottom object property), owl:bottomDataProperty (the bottom data property).
-	Returns: true if this object corresponds to one of the above entities. */
+ *  (the bottom object property), owl:bottomDataProperty (the bottom data property).
+ *
+ *  @return true if this object corresponds to one of the above entities.
+ */
 ABoolean
 func AOwlObject_IsBottomEntity()
 {
@@ -97,9 +112,11 @@ func AOwlObject_IsBottomEntity()
 }
 
 /** Determines if this object is either, owl:Thing (the top class), owl:topObjectProperty
-	(the top object property), owl:topDataProperty (the top data property) or rdfs:Literal
-	(the top datatype).
-	Returns: true if this object corresponds to one of the above entities. */
+ *  (the top object property), owl:topDataProperty (the top data property) or rdfs:Literal
+ *  (the top datatype).
+ *
+ *  @return true if this object corresponds to one of the above entities.
+ */
 ABoolean
 func AOwlObject_IsTopEntity()
 {

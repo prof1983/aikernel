@@ -1,9 +1,9 @@
-/*  AiKernel main
-Author(Prof1983 prof1983@ya.ru)
-Created(06.06.2012)
-LastMod(06.06.2012)
-Version(0.0)
-*/
+/* AiKernel main
+ * Author Prof1983 prof1983@ya.ru
+ * Created 06.06.2012
+ * LastMod 06.06.2012
+ * Version 0.0
+ */
 
 #pragma argsused
 
@@ -13,6 +13,10 @@ Version(0.0)
 
 // ----
 
+/** Initializes agenda
+ *  @return AError value
+ */
+AError
 func Agenda_Init()
 {
 	return 0;
@@ -20,6 +24,10 @@ func Agenda_Init()
 
 // ----
 
+/** Initializes AiKernel
+ *  @return AError value
+ */
+AError
 func AiKernel_Init()
 {
 	if (Agenda_Init() < 0) return -2;
