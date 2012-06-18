@@ -1,8 +1,8 @@
 /* AOwl types
- * Author(Prof1983 prof1983@ya.ru)
- * Created(14.06.2012)
- * LastMod(15.06.2012)
- * Version(0.0)
+ * Author Prof1983 prof1983@ya.ru
+ * Created 14.06.2012
+ * LastMod 18.06.2012
+ * Version 0.0
  *
  * Prototype: OwlApi
  * http://sourceforge.net/projects/owlapi/
@@ -58,7 +58,25 @@ typedef AInt AOwlAxiom;
 typedef AOwlEntitySet AOwlAxiomSet;
 typedef AInt AOwlAxiomType;
 
+/**
+ * </p>
+ * Represents an OWL 2 <a href="http://www.w3.org/TR/2009/REC-owl2-syntax-20091027/#Ontologies">
+ * Ontology</a> in the OWL 2 specification.
+ * </p>
+ * <p>
+ * An <code>AOwlOntology</code> consists of a possibly empty set of AOwlAxioms
+ * and a possibly empty set of AOwlAnnotations.  An ontology can have an ontology IRI which can
+ * be used to identify the ontology. If it has an ontology IRI then it may also have an ontology
+ * version IRI. Since OWL 2, an ontology need not have an ontology IRI.
+ * (See the <a href="http://www.w3.org/TR/2009/REC-owl2-syntax-20091027/">OWL 2 Structural
+ * Specification</a>).
+ * </p>
+ * An ontology cannot be modified directly. Changes must be applied via its
+ * <code>AOwlOntologyManager</code>.
+ */
 typedef AInt AOwlOntology;
+
+typedef AInt AOwlOntologyId;
 
 // --- Reasoner ---
 

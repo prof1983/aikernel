@@ -19,7 +19,8 @@ SOURCES += AiKernel.cpp \
     AiKernelMain.c \
     AOwlNodeSet.c \
     AOwlObject.c \
-    AOwlReasoner.c
+    AOwlReasoner.c \
+    Model/AOwlOntology.c
 
 HEADERS += AiKernel.h\
     AOwl.h
