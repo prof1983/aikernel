@@ -54,9 +54,73 @@ typedef AOwlNode AOwlObjectPropertyExpression;
 typedef AOwlNode AOwlNamedIndividual;
 typedef AOwlNode AOwlClassExpression;
 typedef AOwlNode AOwlDataPropertyExpression;
+
 typedef AInt AOwlAxiom;
-typedef AOwlEntitySet AOwlAxiomSet;
 typedef AInt AOwlAxiomType;
+typedef AInt AOwlIri;
+typedef AInt AOwlOntologyId;
+
+typedef AOwlEntity AOwlAnonymousIndividual;
+typedef AOwlEntity AOwlIndividual;
+typedef AOwlEntity AOwlAnnotationProperty;
+typedef AOwlEntity AOwlDatatype;
+typedef AOwlEntity AOwlAnnotationSubject;
+
+typedef AOwlEntitySet AOwlAxiomSet;
+typedef AOwlEntitySet AOwlAnnotationSet;
+typedef AOwlEntitySet AOwlIriSet;
+typedef AOwlEntitySet AOwlOntologySet;
+typedef AOwlEntitySet AOwlImportsDeclarationSet;
+typedef AOwlEntitySet AOwlLogicalAxiomSet;
+typedef AOwlEntitySet AOwlClassAxiomSet;
+typedef AOwlEntitySet AOwlClassSet;
+typedef AOwlEntitySet AOwlObjectPropertySet;
+typedef AOwlEntitySet AOwlDataPropertySet;
+typedef AOwlEntitySet AOwlNamedIndividualSet;
+typedef AOwlEntitySet AOwlAnonymousIndividualSet;
+typedef AOwlEntitySet AOwlDatatypeSet;
+typedef AOwlEntitySet AOwlAnnotationPropertySet;
+typedef AOwlEntitySet AOwlObjectPropertyAxiomSet;
+typedef AOwlEntitySet AOwlDataPropertyAxiomSet;
+typedef AOwlEntitySet AOwlIndividualAxiomSet;
+typedef AOwlEntitySet AOwlAnnotationAxiomSet;
+typedef AOwlEntitySet AOwlDatatypeDefinitionAxiomSet;
+typedef AOwlEntitySet AOwlSubAnnotationPropertyOfAxiomSet;
+typedef AOwlEntitySet AOwlAnnotationPropertyDomainAxiomSet;
+typedef AOwlEntitySet AOwlAnnotationPropertyRangeAxiomSet;
+typedef AOwlEntitySet AOwlDeclarationAxiomSet;
+typedef AOwlEntitySet AOwlAnnotationAssertionAxiomSet;
+typedef AOwlEntitySet AOwlSubClassOfAxiomSet;
+typedef AOwlEntitySet AOwlEquivalentClassesAxiomSet;
+typedef AOwlEntitySet AOwlDisjointClassesAxiomSet;
+typedef AOwlEntitySet AOwlDisjointUnionAxiomSet;
+typedef AOwlEntitySet AOwlHasKeyAxiomSet;
+typedef AOwlEntitySet AOwlSubObjectPropertyOfAxiomSet;
+typedef AOwlEntitySet AOwlObjectPropertyDomainAxiomSet;
+typedef AOwlEntitySet AOwlObjectPropertyRangeAxiomSet;
+typedef AOwlEntitySet AOwlInverseObjectPropertiesAxiomSet;
+typedef AOwlEntitySet AOwlEquivalentObjectPropertiesAxiomSet;
+typedef AOwlEntitySet AOwlDisjointObjectPropertiesAxiomSet;
+typedef AOwlEntitySet AOwlFunctionalObjectPropertyAxiomSet;
+typedef AOwlEntitySet AOwlInverseFunctionalObjectPropertyAxiomSet;
+typedef AOwlEntitySet AOwlSymmetricObjectPropertyAxiomSet;
+typedef AOwlEntitySet AOwlAsymmetricObjectPropertyAxiomSet;
+typedef AOwlEntitySet AOwlReflexiveObjectPropertyAxiomSet;
+typedef AOwlEntitySet AOwlIrreflexiveObjectPropertyAxiomSet;
+typedef AOwlEntitySet AOwlTransitiveObjectPropertyAxiomSet;
+typedef AOwlEntitySet AOwlSubDataPropertyOfAxiomSet;
+typedef AOwlEntitySet AOwlDataPropertyDomainAxiomSet;
+typedef AOwlEntitySet AOwlDataPropertyRangeAxiomSet;
+typedef AOwlEntitySet AOwlEquivalentDataPropertiesAxiomSet;
+typedef AOwlEntitySet AOwlDisjointDataPropertiesAxiomSet;
+typedef AOwlEntitySet AOwlFunctionalDataPropertyAxiomSet;
+typedef AOwlEntitySet AOwlClassAssertionAxiomSet;
+typedef AOwlEntitySet AOwlDataPropertyAssertionAxiomSet;
+typedef AOwlEntitySet AOwlObjectPropertyAssertionAxiomSet;
+typedef AOwlEntitySet AOwlNegativeObjectPropertyAssertionAxiomSet;
+typedef AOwlEntitySet AOwlNegativeDataPropertyAssertionAxiomSet;
+typedef AOwlEntitySet AOwlSameIndividualAxiomSet;
+typedef AOwlEntitySet AOwlDifferentIndividualsAxiomSet;
 
 /**
  * </p>
@@ -75,8 +139,6 @@ typedef AInt AOwlAxiomType;
  * <code>AOwlOntologyManager</code>.
  */
 typedef AInt AOwlOntology;
-
-typedef AInt AOwlOntologyId;
 
 // --- Reasoner ---
 

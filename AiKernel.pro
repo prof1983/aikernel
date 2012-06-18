@@ -20,7 +20,12 @@ SOURCES += AiKernel.cpp \
     AOwlNodeSet.c \
     AOwlObject.c \
     AOwlReasoner.c \
-    Model/AOwlOntology.c
+    Model/AOwlOntology.c \
+    Model/AOwlOntology_Imported.c \
+    Model/AOwlOntology_References.c \
+    Model/AOwlOntology_Access.c \
+    Model/AOwlOntology_Retrive.c \
+    Model/AOwlOntology_Axioms.c
 
 HEADERS += AiKernel.h\
     AOwl.h
