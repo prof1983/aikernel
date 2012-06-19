@@ -145,7 +145,7 @@ func AOwlOntology_GetImportsDeclarations(AOwlOntology Ontology);
  *  @return <code>true</code> if the ontology is empty, otherwise <code>false</code>.
  */
 ABoolean
-func AOntology_IsEmpty(AOwlOntology Ontology);
+func AOwlOntology_IsEmpty(AOwlOntology Ontology);
 
 /** Retrieves all of the axioms in this ontology. Note that to test whether or not this
  *  ontology is empty (i.e. contains no axioms, the isEmpty method is preferred over

@@ -5,7 +5,4 @@
  *  Version 0.0
  */
 
-//#define A_BUILD_DLL
-
-//#include "AiKernel.h"
-//#include "AOwlOntology.h"
+#include "AiKernel.h"

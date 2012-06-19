@@ -12,7 +12,7 @@
 // --- Methods to retrive class, property and individual axioms ---
 
 ABoolean
-func AOntology_IsEmpty(AOwlOntology Ontology)
+func AOwlOntology_IsEmpty(AOwlOntology Ontology)
 {
 	return ATrue;
 }

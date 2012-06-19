@@ -7,8 +7,7 @@
 
 #pragma argsused
 
-#define A_BUILD_DLL
-
+#include "A.h"
 #include "AiKernel.h"
 
 // ----

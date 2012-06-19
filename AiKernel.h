@@ -1,8 +1,8 @@
 /* AiKernel header
- * Author(Prof1983 prof1983@ya.ru)
- * Created(06.06.2012)
- * LastMod(19.06.2012)
- * Version(0.0)
+ * Author Prof1983 prof1983@ya.ru
+ * Created 06.06.2012
+ * LastMod 19.06.2012
+ * Version 0.0
  */
 
 /*! @mainpage AiKernel Main Page
@@ -21,9 +21,9 @@
 #ifndef AiKernel_H
 #define AiKernel_H
 
+#include "A.h"
 #include "ABase2.h"
-#include "AOwlTypes.h"
-#include "Model/AOwlOntology.h"
+#include "AOwl.h"
 
 /** Initializes agenda
  *  @return AError value

@@ -13,7 +13,7 @@ INCLUDEPATH += ../At/Base
 
 DEFINES += AIKERNEL_LIBRARY
 
-SOURCES += AiKernel.cpp \
+SOURCES += \
     AOwl.c \
     AOwlNode.c \
     AiKernelMain.c \
@@ -31,11 +31,14 @@ SOURCES += AiKernel.cpp \
     Model/AOwlOntology_Classes.c \
     Model/AOwlOntology_ObjectProp.c \
     Model/AOwlOntology_DataProp.c \
-    Model/AOwlOntology_Individuals.c
+    Model/AOwlOntology_Individuals.c \
+    AiKernel.c
 
 HEADERS += AiKernel.h\
     Model/AOwlOntology.h \
-    AOwlTypes.h
+    AOwlTypes.h \
+    AOwl.h \
+    A.h
 #    ../At/Base/ABase2.h \
 #    ../At/Base/ABase.h
 

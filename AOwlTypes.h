@@ -9,9 +9,10 @@
  * http://owlapi.sourceforge.net/
  */
 
-#ifndef AOwl_H
-#define AOwl_H
+#ifndef AOwlTypes_H
+#define AOwlTypes_H
 
+#include "A.h"
 #include "ABase2.h"
 
 // ---
@@ -292,4 +293,4 @@ typedef AInt AOwlInferenceType;
 
 typedef AInt AOwlInferenceTypeSet;
 
-#endif
+#endif // AOwlTypes_H
