@@ -25,10 +25,17 @@ SOURCES += AiKernel.cpp \
     Model/AOwlOntology_References.c \
     Model/AOwlOntology_Access.c \
     Model/AOwlOntology_Retrive.c \
-    Model/AOwlOntology_Axioms.c
+    Model/AOwlOntology_Axioms.c \
+    Model/AOwlOntology_Annotation.c \
+    Model/AOwlOntology_Axioms2.c \
+    Model/AOwlOntology_Classes.c \
+    Model/AOwlOntology_ObjectProp.c \
+    Model/AOwlOntology_DataProp.c \
+    Model/AOwlOntology_Individuals.c
 
 HEADERS += AiKernel.h\
-    AOwl.h
+    Model/AOwlOntology.h \
+    AOwlTypes.h
 #    ../At/Base/ABase2.h \
 #    ../At/Base/ABase.h
 
