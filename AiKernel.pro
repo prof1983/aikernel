@@ -1,15 +1,18 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2012-06-15T08:31:31
+# Author Prof1983 <prof1983@ya.ru>
+# Created 15.06.2012
+# LastMod 16.07.2012
 #
 #-------------------------------------------------
 
-QT       -= core gui
+QT -= core gui
 
 TARGET = AiKernel
 TEMPLATE = lib
 
-INCLUDEPATH += ../At/Base
+INCLUDEPATH += Include
+INCLUDEPATH += ../At/Include
 
 DEFINES += AIKERNEL_LIBRARY
 
@@ -34,13 +37,11 @@ SOURCES += \
     Model/AOwlOntology_Individuals.c \
     AiKernel.c
 
-HEADERS += AiKernel.h\
-    Model/AOwlOntology.h \
-    AOwlTypes.h \
-    AOwl.h \
-    A.h
-#    ../At/Base/ABase2.h \
-#    ../At/Base/ABase.h
+HEADERS += A.h \
+	Include/AOwl \
+	Include/AOwlOntology \
+	Include/AOwlTypes \
+    Include/AiKernel
 
 symbian {
     MMP_RULES += EXPORTUNFROZEN

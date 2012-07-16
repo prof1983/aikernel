@@ -10,7 +10,7 @@
 #ifndef AOwlOntology_H
 #define AOwlOntology_H
 
-#include "AOwlTypes.h"
+#include "AOwlTypes"
 
 // --- Types ---
 
