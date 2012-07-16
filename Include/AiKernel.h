@@ -1,7 +1,7 @@
 /* AiKernel header
  * Author Prof1983 prof1983@ya.ru
  * Created 06.06.2012
- * LastMod 19.06.2012
+ * LastMod 16.07.2012
  * Version 0.0
  */
 
@@ -22,7 +22,7 @@
 #define AiKernel_H
 
 #include "A.h"
-#include "ABase2.h"
+#include "ABase"
 #include "AOwl.h"
 
 /** Initializes agenda

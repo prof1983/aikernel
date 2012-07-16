@@ -1,7 +1,7 @@
 /* AOwl types
  * Author Prof1983 prof1983@ya.ru
  * Created 14.06.2012
- * LastMod 18.06.2012
+ * LastMod 16.0.2012
  * Version 0.0
  *
  * Prototype: OwlApi
@@ -13,7 +13,7 @@
 #define AOwlTypes_H
 
 #include "A.h"
-#include "ABase2.h"
+#include "ABase"
 
 // ---
 

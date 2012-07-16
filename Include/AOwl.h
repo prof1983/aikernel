@@ -14,6 +14,6 @@
 
 #include "A.h"
 #include "AOwlTypes.h"
-#include "Model/AOwlOntology.h"
+#include "../Model/AOwlOntology.h"
 
 #endif // AOwl_H
