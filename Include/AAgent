@@ -1,0 +1,6 @@
+#ifndef AAgent_H
+#define AAgent_H
+
+#include "ABase"
+
+#endif
