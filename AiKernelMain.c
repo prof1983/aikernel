@@ -1,8 +1,7 @@
 /* AiKernel main
  * Author Prof1983 <prof1983@ya.ru>
  * Created 06.06.2012
- * LastMod 16.07.2012
- * Version 0.0
+ * LastMod 12.11.2012
  */
 
 //#pragma argsused
@@ -12,9 +11,6 @@
 
 // ----
 
-/** Initializes agenda
- *  @return AError value
- */
 AError
 func Agenda_Init()
 {
@@ -23,14 +19,34 @@ func Agenda_Init()
 
 // ----
 
-/** Initializes AiKernel
- *  @return AError value
- */
 AError
 func AiKernel_Init()
 {
 	if (Agenda_Init() < 0) return -2;
 	return 0;
+}
+
+// ---
+
+typedef struct {
+    AEnviroment Enviroment;
+    ARunner Runner;
+} AEngine_Type;
+
+typedef struct {
+    AInt Agents;
+} AEnviroment_Type;
+
+AEnviroment
+func AiKernel_GetEngineEnviroment(AEngine Engine)
+{
+    return 0;
+}
+
+ARunner
+func AiKernel_GetEngineRunner(AEngine Engine)
+{
+    return 0;
 }
 
 // ----

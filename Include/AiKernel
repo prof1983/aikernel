@@ -1,8 +1,7 @@
 /* AiKernel header
- * Author Prof1983 prof1983@ya.ru
+ * Author Prof1983 <prof1983@ya.ru>
  * Created 06.06.2012
- * LastMod 16.07.2012
- * Version 0.0
+ * LastMod 12.11.2012
  */
 
 /*! @mainpage AiKernel Main Page
@@ -25,6 +24,10 @@
 #include "ABase"
 #include "AOwl"
 
+typedef AInt AEngine;
+typedef AInt AEnviroment;
+typedef AInt ARunner;
+
 /** Initializes agenda
  *  @return AError value
  */
@@ -36,5 +39,17 @@ func Agenda_Init();
  */
 AError
 func AiKernel_Init();
+
+/** Return engine enviroment
+ *  @return Engine enviroment
+ */
+AEnviroment
+func AiKernel_GetEngineEnviroment(AEngine Engine);
+
+/** Return engine runner
+ *  @return Engine runner
+ */
+ARunner
+func AiKernel_GetEngineRunner(AEngine Engine);
 
 #endif // AiKernel_H
