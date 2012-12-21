@@ -9,6 +9,7 @@
 #define AAtom_H
 
 #include "AAtomHandle.h"
+#include "AAtomTable.h"
 
 //#include <string>
 //#include <opencog/atomspace/TruthValue.h>
@@ -26,13 +27,11 @@
 //class AtomTable;
 //class HandleEntry;
 
-/**
- * Atoms are the basic implementational unit in the system that
- * represents nodes and links. In terms of inheritance, nodes and
- * links are specialization of atoms, that is, they inherit all
- * properties from atoms.
+/** Atoms are the basic implementational unit in the system that
+ *  represents nodes and links. In terms of inheritance, nodes and
+ *  links are specialization of atoms, that is, they inherit all
+ *  properties from atoms.
  */
-
 typedef struct {
     // --- protected ---
     AAtomHandle handle;

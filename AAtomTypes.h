@@ -13,10 +13,7 @@
 //#include <boost/variant.hpp>
 //#include <opencog/atomspace/Handle.h>
 
-//namespace opencog
-//{
-
-//class Atom;
+typedef AAtom;
 
 // type and arity of Atoms, represented as short integers (16 bits)
 typedef unsigned short Type;
