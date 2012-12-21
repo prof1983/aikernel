@@ -38,7 +38,7 @@
 			<ProjectType>CppDynamicLibrary</ProjectType>
 			<ILINK_LibraryPath>..\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
 			<DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
-			<IncludePath>..\;..\..\At\Base;..\..\At\Common;$(IncludePath)</IncludePath>
+			<IncludePath>..\;..;..\Include;..\..\AToolkit\Base;..\..\AToolkit\Common;..\..\AToolkit\Include;$(IncludePath)</IncludePath>
 			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
 			<_TCHARMapping>char</_TCHARMapping>
 			<BCC_OutputDir>..\..\..\Obj\AiKernel</BCC_OutputDir>
@@ -195,7 +195,6 @@
 						<Excluded_Packages Name="$(BDSBIN)\dclribbon160.bpl">Embarcadero Ribbon Controls</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\dclDBXDrivers160.bpl">Embarcadero Driver Components</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\dclDBXDriversInt160.bpl">Embarcadero Intro Driver Components</Excluded_Packages>
-						<Excluded_Packages Name="$(BDSBIN)\dclIPIndyImpl160.bpl">IP Abstraction Indy Implementation Design Time</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\dcldbxcds160.bpl">Embarcadero SimpleDataset Component (DBX)</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\dclCloudService160.bpl">Embarcadero Cloud management components</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\dclDBXDriversEnt160.bpl">Embarcadero Enterprise Driver Components</Excluded_Packages>
@@ -208,6 +207,7 @@
 						<Excluded_Packages Name="C:\Program Files\FastReports\LibD16\dclfsDB16.bpl">FastScript 1.9 DB Components</Excluded_Packages>
 						<Excluded_Packages Name="C:\Program Files\FastReports\LibD16\dclfrxDB16.bpl">FastReport 4.0 DB Components</Excluded_Packages>
 						<Excluded_Packages Name="C:\Program Files\FastReports\LibD16\dclfrxe16.bpl">FastReport 4.0 Exports</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclIPIndyImpl160.bpl">IP Abstraction Indy Implementation Design Time</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
 						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
