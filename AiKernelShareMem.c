@@ -1,9 +1,8 @@
-/*  AiKernel share mem functions
-Author(Prof1983 prof1983@ya.ru)
-Created(06.06.2012)
-LastMod(06.06.2012)
-Version(0.0)
-*/
+/* AiKernel share mem functions
+ * Author Prof1983 <prof1983@ya.ru>
+ * Created 06.06.2012
+ * LastMod 24.12.2012
+ */
 
 /*
 --- ShareMem ---
@@ -52,7 +51,14 @@ func ShareMem_At(HANDLE hMapFile, AUInt BufSize)
 AError
 func ShareMem_Close(HANDLE hMapFile)
 {
-	CloseHandle(hMapFile);
+	if (CloseHandle(hMapFile) == TRUE)
+    {
+        return 0;
+    }
+    else
+    {
+        return -1;
+    }
 }
 
 AError
